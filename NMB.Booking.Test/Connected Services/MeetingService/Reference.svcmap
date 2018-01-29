@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="dacf4790-eae7-49d8-b934-f430baa14b85" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1250/meeting.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="meeting.xsd" MetadataType="Schema" ID="8aacc1d2-da12-43bb-b893-020fd0d39121" SourceId="1" SourceUrl="http://localhost:1250/meeting.svc?xsd=xsd0" />
+    <MetadataFile FileName="meeting.disco" MetadataType="Disco" ID="7e359cff-f1fe-4841-a0e3-628c94443685" SourceId="1" SourceUrl="http://localhost:1250/meeting.svc?disco" />
+    <MetadataFile FileName="meeting1.xsd" MetadataType="Schema" ID="34e05592-31f4-4a70-926f-ea0c8a741c23" SourceId="1" SourceUrl="http://localhost:1250/meeting.svc?xsd=xsd1" />
+    <MetadataFile FileName="Meeting.wsdl" MetadataType="Wsdl" ID="dc53ee83-81f9-4e43-a04d-c5ebf23c57f7" SourceId="1" SourceUrl="http://localhost:1250/meeting.svc?wsdl" />
+    <MetadataFile FileName="meeting2.xsd" MetadataType="Schema" ID="c5b457dd-8145-4c9b-8ea6-2b6bc0ae9269" SourceId="1" SourceUrl="http://localhost:1250/meeting.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

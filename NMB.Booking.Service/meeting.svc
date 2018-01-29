@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="NMB.Booking.Service.Meeting" CodeBehind="meeting.svc.cs" %>

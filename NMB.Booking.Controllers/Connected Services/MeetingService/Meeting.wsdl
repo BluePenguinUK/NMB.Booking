@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Meeting" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:1250/meeting.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:1250/meeting.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:1250/meeting.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/NMB.Booking.Models" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMeeting_GetLocationById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocationById" />
+  </wsdl:message>
+  <wsdl:message name="IMeeting_GetLocationById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocationByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMeeting_GetMeetingById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMeetingById" />
+  </wsdl:message>
+  <wsdl:message name="IMeeting_GetMeetingById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMeetingByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMeeting_GetPersonsByMeetingId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonsByMeetingId" />
+  </wsdl:message>
+  <wsdl:message name="IMeeting_GetPersonsByMeetingId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonsByMeetingIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMeeting_ResetMeeting_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResetMeeting" />
+  </wsdl:message>
+  <wsdl:message name="IMeeting_ResetMeeting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResetMeetingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMeeting_AddPersonsMulti_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPersonsMulti" />
+  </wsdl:message>
+  <wsdl:message name="IMeeting_AddPersonsMulti_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPersonsMultiResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMeeting">
+    <wsdl:operation name="GetLocationById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMeeting/GetLocationById" message="tns:IMeeting_GetLocationById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMeeting/GetLocationByIdResponse" message="tns:IMeeting_GetLocationById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMeetingById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMeeting/GetMeetingById" message="tns:IMeeting_GetMeetingById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMeeting/GetMeetingByIdResponse" message="tns:IMeeting_GetMeetingById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonsByMeetingId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMeeting/GetPersonsByMeetingId" message="tns:IMeeting_GetPersonsByMeetingId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMeeting/GetPersonsByMeetingIdResponse" message="tns:IMeeting_GetPersonsByMeetingId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetMeeting">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMeeting/ResetMeeting" message="tns:IMeeting_ResetMeeting_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMeeting/ResetMeetingResponse" message="tns:IMeeting_ResetMeeting_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPersonsMulti">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMeeting/AddPersonsMulti" message="tns:IMeeting_AddPersonsMulti_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMeeting/AddPersonsMultiResponse" message="tns:IMeeting_AddPersonsMulti_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IMeeting" type="tns:IMeeting">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetLocationById">
+      <soap:operation soapAction="http://tempuri.org/IMeeting/GetLocationById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMeetingById">
+      <soap:operation soapAction="http://tempuri.org/IMeeting/GetMeetingById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonsByMeetingId">
+      <soap:operation soapAction="http://tempuri.org/IMeeting/GetPersonsByMeetingId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetMeeting">
+      <soap:operation soapAction="http://tempuri.org/IMeeting/ResetMeeting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPersonsMulti">
+      <soap:operation soapAction="http://tempuri.org/IMeeting/AddPersonsMulti" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Meeting">
+    <wsdl:port name="BasicHttpBinding_IMeeting" binding="tns:BasicHttpBinding_IMeeting">
+      <soap:address location="http://localhost:1250/meeting.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
